@@ -1,0 +1,149 @@
+/* Shared Image Styles for Consistent Layout */
+
+/* Blog Post Cards Images */
+.post-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.post-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Featured Images on Pages */
+.post-featured-image {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-featured-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.post-featured-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Gallery Images */
+.gallery-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Hero Section Images */
+.hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Member Images */
+.team-member-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.team-member-image:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Image Adjustments */
+@media (max-width: 768px) {
+  .post-featured-image img {
+    height: 250px;
+  }
+  
+  .post-image {
+    height: 200px;
+  }
+  
+  .gallery-image img {
+    height: 200px;
+  }
+  
+  .hero-image img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-featured-image img {
+    height: 200px;
+  }
+  
+  .post-image {
+    height: 180px;
+  }
+  
+  .gallery-image img {
+    height: 180px;
+  }
+  
+  .hero-image img {
+    height: 200px;
+  }
+}
+
+/* Image Loading States */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Image Error States */
+.image-error {
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 1rem;
+  border: 2px dashed #dee2e6;
+}
+
+.image-error i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
